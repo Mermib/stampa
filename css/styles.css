@@ -1,0 +1,348 @@
+@font-face {
+    font-family: 'robotobold';
+    src: url('../fonts/roboto-bold-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'robotoitalic';
+    src: url('../fonts/roboto-italic-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'robotolight';
+    src: url('../fonts/roboto-light-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'robotomedium';
+    src: url('../fonts/roboto-medium-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('../fonts/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --morado:  #6E1B73;
+    --verde:  #80BA27;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+ul li {
+    list-style: none;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'robotoregular';
+    font-size: 1.8rem;
+}
+header {
+    width: 100%;
+}
+
+h1 {
+    font-size: 3.6rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'robotobold';
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.container {
+    margin: 0px auto;
+}
+
+header nav {
+    width: 100%;
+    box-shadow: rgb(34, 34, 34) 0px 4px 6px -6px;
+    height: 11rem;
+    z-index: 99;
+    position: fixed;
+    top: 0px;
+    background: rgb(255, 255, 255);
+}
+
+nav.topnav a.logo {
+    width: fit-content;
+    margin-left: 15px;
+    height: 110px;
+    padding: 0px;
+}
+
+nav.topnav a {
+    color: #80BA27;
+    font-family: 'robotomedium';
+    font-size: 1.8rem;
+    display: block;
+    text-align: center;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+nav.topnav a:hover, nav.topnav a:active, nav.topnav a:focus {
+    color: white;
+    opacity: 0.8;
+    background: var(--verde);
+}
+
+
+nav.topnav #myLinks {
+    display: none;
+    z-index: 999;
+    box-shadow: rgb(34, 34, 34) 0px 4px 6px -6px;
+    background: rgb(255, 255, 255);
+}
+
+.topnav a.icon {
+    color: white;
+    background-color: var(--verde);
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 30%;
+}
+
+.headerImg {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    top: 11rem;
+    background: lightgrey;
+}
+
+main {
+    max-width: 85%;
+    display: block;
+    margin: 14rem auto 30px;
+}
+
+.gallerySlider {
+    height: 200px;
+}
+
+.order {
+    display: flex;
+    flex-direction: column;
+}
+
+.orderItem {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.orderItem i {
+    font-size: 3rem;
+    color:  var(--morado);
+    text-align: center;
+    margin-bottom: 15px;
+    padding: 15px;
+    border:1px solid var(--verde);
+    border-radius: 50%;
+}
+
+.presupuesto {
+    text-align: center;
+    width: 190px;
+    box-shadow: rgb(34, 34, 34) 1px 4px 12px -6px;
+    margin: 50px auto 60px;
+    padding: 20px 15px;
+    border-radius: 5px;
+    background: white;
+}
+
+.presupuesto:hover {
+    color: white;
+    background: var(--morado);
+}
+
+.needHelp {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.helpitem {
+    margin-bottom: 30px;
+}
+
+footer {
+    height: 11rem;
+    display: flex;
+    justify-content: space-between;
+    background: var(--morado);
+}
+
+footer .contactWrapper {
+    width: unset;
+    margin-right: 15px;
+    margin-top: 12px;
+}
+
+footer nav {
+    display: none;
+}
+
+footer .contactInfo {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+footer .socialMediaIcons {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+footer .socialMediaIcons i.fa-facebook-square {
+    color: rgb(59, 89, 152);
+    font-size: 3rem;
+    background: white;
+}
+
+footer p {
+    font-size: 1.2rem;
+    font-family: 'robotolight';
+    color: white;
+}
+
+footer .copyright {
+    text-align: right;
+}
+
+@media (min-width:768px) {
+    header nav, nav.topnav #myLinks {
+        display: flex;
+    }
+
+    header nav {
+        position: relative;
+        justify-content: space-around;
+    }
+
+    .topnav a.icon {
+        display: none;
+    }
+
+    nav.topnav a {
+        padding: 7px 15px 10px;
+    }
+
+    nav.topnav #myLinks li::after {
+        content: "|";
+        color: var(--morado);
+        margin: 7px 0px;
+    }
+
+    nav.topnav #myLinks li:last-child::after {
+        content: "";
+    }
+
+    nav.topnav #myLinks {
+        box-shadow: none;
+        height: 40px;
+        margin-top: 15px;
+    }
+
+    nav.topnav #myLinks li {
+        display: flex;
+    }
+
+    .headerImg {
+        height: 350px;
+        top: unset;
+    }
+
+    main {
+        margin: 30px auto;
+    }
+
+    .order {
+        flex-direction: row;
+        margin-top: 30px;
+    }
+
+    .needHelp {
+        flex-direction: row;
+        text-align: center;
+        justify-content: space-around;
+    }
+
+    .helpitem {
+        margin: 0px 30px;
+    }
+
+    footer .contactWrapper {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer nav {
+        display: block;
+        height: 40px;
+    }
+
+    footer nav ul {
+        display: flex;
+        margin-top: 15px;
+    }
+
+    footer nav ul li {
+        list-style: none;
+        margin: 0px 10px;
+    }
+
+    footer nav ul li a {
+        color: white;
+        font-family: 'robotolight';
+        font-size: 1.6rem;
+        text-decoration: none;
+    }
+
+    footer nav ul li a:hover, footer nav ul li a:focus {
+        border-bottom: 3px solid var(--verde);
+    }
+
+    footer .contactInfo {
+        flex-direction: row;
+        padding-top: 15px;
+    }
+    
+    
+}

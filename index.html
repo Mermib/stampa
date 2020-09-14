@@ -1,11 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stampa</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Stampa</title>
+    
+        <link href="fonts/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
 <body>
-    <p>test stampa</p>
+    <header>        
+        <nav class="topnav container">
+            <a href="/" class="logo"><img src="img/logo.jpg" alt="Logo Stampa" width="110"></a>
+            <ul id="myLinks">
+                <li><a href="">Acerca de nosotros</a></li>
+                <li><a href="">Servicios</a></li>
+                <li><a href="">Productos</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>    
+        <div class="headerImg"><img src="" alt=""></div>   
+    </header>
+    <main>
+        <section class="whyStampa">
+            <h1>¿Por qué Stampa?</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                 when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </section>
+        <section class="gallerySlider">
+
+        </section>
+        <section class="makeOrder">
+            <h2>Haz tu pedido</h2>
+            <div class="order">
+                <div class="orderItem">
+                    <i class="fas fa-dollar-sign" style="padding: 15px 22px;"></i>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                </div>
+                <div class="orderItem">
+                    <i class="fas fa-paint-brush"></i>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                </div>
+                <div class="orderItem">
+                    <i class="fas fa-check"></i>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                </div>
+            </div>
+            <div class="presupuesto">Pide tu presupuesto</div>
+        </section>
+        <section class="help">
+            <h2>¿Necesitas ayuda?</h2>
+            <div class="needHelp">
+                <div class="helpWrite helpitem">Escríbenos a <br> <a href="mailto:correo@correo.com">correo@correo.com</a></div>
+                <div class="helpCall helpitem"> Llámanos <br>000-123-8546</div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <img src="img/logo.jpg" alt="Logo Stampa" width="110">
+
+        <div class="contactWrapper">
+            <nav>
+                <ul>
+                    <li><a href="">Acerca de nosotros</a></li>
+                    <li><a href="">Servicios</a></li>
+                    <li><a href="">Productos</a></li>
+                    <li><a href="">Contacto</a></li>
+                </ul>
+            </nav>        
+        
+            
+            <div class="contactInfo">
+                <div class="socialMediaIcons">
+                    <a href="https://www.facebook.com/Stampa-Mexico-Serigrafia-685817014886324" target="_blank">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>  
+                </div>
+                <p>Calle 24 región 92 77516 Cancún, México <br>
+                998-000-0000</p>
+                <div class="copyright"><p><small>Copyright 2020</small></p></div>
+            </div>            
+            
+        </div>
+    </footer>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
