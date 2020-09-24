@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Stampa</title>
+    
+        <link href="fonts/css/all.css" rel="stylesheet">
+        <link rel="preload" href="fonts.css" as="style">
+
+        <link rel="stylesheet" href="css/fonts.css">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+<body>
+    <header>        
+        <nav class="topnav container">
+            <a href="index.html" class="logo"><img src="img/logo.jpg" alt="Logo Stampa" width="210"></a>
+            <ul id="myLinks">
+                <li><a href="acerca-de-nosotros.html">Acerca de nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>           
+    </header>
+
+    <main>
+
+    </main>
+
+    <footer>
+        <img src="img/logo.jpg" alt="Logo Stampa" width="220">
+
+        <div class="contactWrapper">
+            <nav>
+                <ul>
+                    <li><a href="/acerca-de-nosotros.html">Acerca de nosotros</a></li>
+                    <li><a href="/servicios.html">Servicios</a></li>
+                    <li><a href="/productos.html">Productos</a></li>
+                    <li><a href="/contacto.html">Contacto</a></li>
+                </ul>
+            </nav>        
+        
+            
+            <div class="contactInfo">
+                <div class="socialMediaIcons">
+                    <a href="https://www.facebook.com/Stampa-Mexico-Serigrafia-685817014886324" target="_blank">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>  
+                </div>
+                <p>Calle 24 región 92 77516 Cancún, México <br>
+                998-000-0000</p>
+                <div class="copyright"><p><small>Copyright 2020</small></p></div>
+            </div>            
+            
+        </div>
+    </footer>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
