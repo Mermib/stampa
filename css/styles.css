@@ -8,6 +8,10 @@ html {
     font-size: 62.5%;
 }
 
+.desktop {
+    display:none
+}
+
 ul li {
     list-style: none;
 }
@@ -117,10 +121,23 @@ nav.topnav #myLinks {
 
 .headerImg {
     width: 100%;
-    height: 250px;
     position: relative;
-    top: 11rem;
-    background: lightgrey;
+    top: 5rem;
+}
+.headerImg img {
+    width: 100%;
+}
+
+.nivo-prevNav {
+    left:15px!important;
+    color: var(--verde);
+    font-size :30px;
+}
+
+.nivo-nextNav {
+    right:15px!important;
+    color: var(--verde);
+    font-size :30px;
 }
 
 main {
@@ -192,6 +209,9 @@ main {
 
 
 /* Servicios */
+.services {
+    text-align: center;
+}
 .service h4 {
     text-align: center;
     margin-bottom:15px;
@@ -237,6 +257,7 @@ footer .contactInfo {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    margin:0;
 }
 
 footer .socialMediaIcons {
@@ -261,6 +282,14 @@ footer .copyright {
 }
 
 @media (min-width:768px) {
+    .desktop {
+        display:block;
+    }
+    .mobile {
+        display:none;
+    }
+
+
     h1 {
         width: 50%;
     }
@@ -302,7 +331,6 @@ footer .copyright {
     }
 
     .headerImg {
-        height: 350px;
         top: unset;
     }
 
@@ -394,6 +422,7 @@ footer .copyright {
     footer .contactInfo {
         flex-direction: row;
         padding-top: 15px;
+        margin:0;
     }
     
     

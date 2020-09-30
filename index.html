@@ -6,11 +6,19 @@
         <title>Stampa</title>
     
         <link href="fonts/css/all.css" rel="stylesheet">
-        <link rel="preload" href="fonts.css" as="style">
-
+        <link rel="preload" href="css/fonts.css" as="style">
         <link rel="stylesheet" href="css/fonts.css">
 
         <link rel="stylesheet" href="css/styles.css">
+
+        <link rel="stylesheet" href="css/themes/default/default.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
+
+        <style>
+            main {
+                margin: 5rem auto 30px;
+            }
+        </style>
     </head>
 <body>
     <header>        
@@ -27,8 +35,20 @@
                 <i class="fa fa-bars"></i>
             </a>
         </nav>    
-        <div class="headerImg"><img src="" alt=""></div>   
-    </header>
+        <div class="headerImg desktop" id="slider">
+            <img alt="" class="" src="img/headers/header1.png"  />
+            <img alt="" class="" src="img/headers/header2.png"  />
+            <img alt="" class="" src="img/headers/header3.png">
+            <img alt="" class="" src="img/headers/header4.png">
+        </div>   
+        <div class="headerImg mobile" id="slider">
+            <img alt="" class="" src="img/headers/header1_xs.png"  />
+            <img alt="" class="" src="img/headers/header2_xs.png"  />
+            <img alt="" class="" src="img/headers/header3_xs.png">
+            <img alt="" class="" src="img/headers/header4_xs.png">
+        </div>   
+</header>
+
     <main>
         <h1>Stampa México Serigrafía </h1>
         <section class="whyStampa">
@@ -105,5 +125,47 @@
             }
         }
     </script>
+    <!-- Script para banners que carge desktop y mbile segun corresponda -->
+    <script type="text/javascript" async>
+        const banners = document.querySelectorAll("[data-srcsetbanner]");
+        const bannerxs = document.querySelectorAll("[data-srcsetbannerxs]");
+        const img = document.querySelectorAll("[data-srcsetbannerimg");
+        let width = window.innerWidth;
+        if (width >= 768) {
+            banners.forEach(function (element) {
+                element.setAttribute('srcset', element.getAttribute("data-srcsetbanner"));
+            });
+            img.forEach(function (elementxs) {
+                elementxs.src = elementxs.getAttribute("data-srcsetbannerimg");
+            });
+
+        }
+        else if (width < 768)  {
+            bannerxs.forEach(function (element) {
+                element.setAttribute('srcset', element.getAttribute("data-srcsetbannerxs"));
+            });
+            img.forEach(function (elementxs) {
+                elementxs.src = elementxs.getAttribute("data-srcsetbannerimg");
+            });
+        }
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+
+    <script type="text/javascript">
+        $(window).load(function() {
+            $('.headerImg').nivoSlider({
+                effect:'fade',
+                animSpeed: 500,
+                pauseTime: 3000,
+                startSlide: 0,
+                directionNav:true,
+                prevText:'<i class="fas fa-chevron-left"></i>',
+                nextText:'<i class="fas fa-chevron-right"></i>',
+                controlNav:false,
+            });        
+        });
+        </script>
+        
 </body>
 </html>
