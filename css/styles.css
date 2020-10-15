@@ -122,7 +122,7 @@ nav.topnav #myLinks {
 .headerImg {
     width: 100%;
     position: relative;
-    top: 5rem;
+    top: 11rem;
 }
 .headerImg img {
     width: 100%;
@@ -144,7 +144,7 @@ main {
     max-width: 85%;
     min-height: 500px;
     display: block;
-    margin: 14rem auto 30px;
+    margin: 16rem auto 30px;
 }
 
 .whyStampa {
@@ -222,8 +222,28 @@ main {
 
 .service img {
     border:2px solid transparent;
+    border-radius: 6px;
 }
 .service img:hover, .service img:focus, .service img:active {
+    opacity:0.8;
+    border:2px solid var(--naranja);
+}
+
+/* Productos */
+
+.productItem {
+    text-align: center;
+    margin: 0 0 30px 0;
+}
+.productItem img {
+    width: 250px;
+    margin: 0 auto 10px;
+    display: block;
+    padding:0;
+    border-radius: 6px;
+    border:2px solid transparent;
+}
+.productItem img:hover, .productItem img:focus, .productItem img:active {
     opacity:0.8;
     border:2px solid var(--naranja);
 }
@@ -369,6 +389,18 @@ footer .copyright {
     .service img {
         box-shadow:rgb(34, 34, 34) 5px 5px 7px -6px;
         margin-bottom: 15px;
+    }
+
+
+    /* Productos */
+    .productContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .productItem img {
+        max-height: 170px;
     }
 
     /* Contacto */
